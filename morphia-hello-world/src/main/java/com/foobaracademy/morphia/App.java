@@ -40,7 +40,7 @@ public class App {
 		userDAO.save(user3);
 		
 		
-		System.out.println("Before persist  : ");
+		System.out.println("After persist  : ");
 		System.out.println("User1 objectId " + user1.getObjectId());
 		System.out.println("User2 objectId " + user2.getObjectId());
 		System.out.println("User3 objectId " + user3.getObjectId());
