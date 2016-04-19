@@ -3,26 +3,16 @@ package com.foobaracademy.morphia;
 import java.util.List;
 
 import org.bson.types.ObjectId;
-import org.mongodb.morphia.dao.DAO;
+
 
 /**
  * Our own Data Access Object interface for the User entity.
- * 
- * 
- * Note that we extend org.mongodb.morphia.dao.DAO<T,K>
- * which uses primitives : 
- * T is the Type to persist, User in this case 
- * K is the type of the entity's unique 
- * identifier, ObjectId in this case 
- * ( == The type of the field that we annotated with 
- * @Id in our User class)
- * 
  * @author Alex
  *
  */
-public interface UserDAO extends DAO<User, ObjectId>{
+public interface UserDAO {
 
-	
+	public boolean store(User user);
 	
 	/**
 	 * get a user using its first name and last name
