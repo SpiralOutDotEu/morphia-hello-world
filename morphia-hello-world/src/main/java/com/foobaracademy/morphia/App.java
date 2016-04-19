@@ -35,9 +35,9 @@ public class App {
 		System.out.println("User3 objectId " + user3.getObjectId());
 		
 		
-		userDAO.save(user1);
-		userDAO.save(user2);
-		userDAO.save(user3);
+		userDAO.store(user1);
+		userDAO.store(user2);
+		userDAO.store(user3);
 		
 		
 		System.out.println("After persist  : ");
