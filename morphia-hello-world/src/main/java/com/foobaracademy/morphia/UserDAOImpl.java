@@ -34,5 +34,15 @@ public class UserDAOImpl extends BasicDAO<User, ObjectId> implements UserDAO {
 		
 		return query.asList();
 	}
+	@Override
+	public boolean store(User user) {
+		try {
+			this.save(user);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
 
 }
